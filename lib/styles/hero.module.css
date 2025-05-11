@@ -1,0 +1,24 @@
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+  .background {
+    background-attachment: fixed;
+    background-position: bottom 150px left 0;
+  }
+}
+
+.h1 {
+  font-size: 40px;
+  line-height: calc(40px * 1.1);
+}
+
+@media screen and (min-width: 1200px) {
+  .h1 {
+    font-size: 50px;
+    line-height: calc(50px * 1.1);
+  }
+}

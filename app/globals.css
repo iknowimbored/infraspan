@@ -1,6 +1,8 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -39,4 +41,11 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.custom-class .social-svg-icon {
+  fill: var(--mauve-8) !important;
+}
+.custom-class:hover .social-svg-icon {
+  fill: var(--mauve-12) !important;
 }
