@@ -21,6 +21,7 @@ import {
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { ContactUsInputs } from "../@types/contact";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export const ContactUsCard = ({
   heading,
@@ -32,6 +33,7 @@ export const ContactUsCard = ({
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isFail, setIsFail] = useState(false);
+  const [isVerified, setIsVerified] = useState(false);
   const { register, handleSubmit } = useForm<ContactUsInputs>();
 
   const onSubmit: SubmitHandler<ContactUsInputs> = async (data) => {
@@ -49,6 +51,21 @@ export const ContactUsCard = ({
       setIsFail(true);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const verifyToken = async (token: string) => {
+    try {
+      setIsVerified(true);
+      await fetch("/api/captcha", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ token }),
+      });
+    } catch {
+      setIsVerified(false);
     }
   };
 
@@ -173,12 +190,16 @@ export const ContactUsCard = ({
                         placeholder="Write a message..."
                       />
                     </Box>
+                    <HCaptcha
+                      sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY!}
+                      onVerify={(token) => verifyToken(token)}
+                    />
                     <Box gridColumn={{ sm: "1 / span 2" }}>
                       <Button
                         type="submit"
                         style={{ width: "100%" }}
                         size="3"
-                        disabled={isLoading}
+                        disabled={isLoading || !isVerified}
                       >
                         {isLoading && <Spinner aria-label="Loading" />}
                         Submit
