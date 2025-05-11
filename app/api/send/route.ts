@@ -1,0 +1,25 @@
+import { ContactUsInputs } from "@/lib/@types/contact";
+import { EmailTemplate } from "@/lib/components/email-template";
+import { NextRequest, NextResponse } from "next/server";
+import { ReactNode } from "react";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function POST(request: NextRequest) {
+  try {
+    const body: ContactUsInputs = await request.json();
+    const { error } = await resend.emails.send({
+      from: "Infraspan Info <info@infraspan.com.au>",
+      to: [body.email, "info@memsafe.com.au"],
+      subject: "Thank You for Contacting Infraspan",
+      react: EmailTemplate(body) as ReactNode,
+    });
+    if (error) {
+      throw new Error(error.message);
+    }
+    return NextResponse.json(body);
+  } catch (error) {
+    return NextResponse.json({ error }, { status: 500 });
+  }
+}

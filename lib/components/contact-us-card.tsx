@@ -1,13 +1,12 @@
 "use client";
 
-import { CheckIcon } from "@radix-ui/react-icons";
 import {
   Blockquote,
   Box,
   Button,
-  Callout,
   Card,
   Container,
+  Dialog,
   Flex,
   Grid,
   Heading,
@@ -21,14 +20,7 @@ import {
 } from "@radix-ui/themes";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-
-type Inputs = {
-  fullName: string;
-  email: string;
-  phoneNumber: string;
-  companyName: string;
-  message: string;
-};
+import { ContactUsInputs } from "../@types/contact";
 
 export const ContactUsCard = ({
   heading,
@@ -38,19 +30,25 @@ export const ContactUsCard = ({
   subheading?: string;
 }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { register, handleSubmit } = useForm<Inputs>();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isFail, setIsFail] = useState(false);
+  const { register, handleSubmit } = useForm<ContactUsInputs>();
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<ContactUsInputs> = async (data) => {
     try {
-      setIsSubmitted(false);
       setIsLoading(true);
+      await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      setIsFail(true);
     } catch {
+      setIsFail(true);
     } finally {
-      setTimeout(() => {
-        setIsLoading(false);
-        setIsSubmitted(true);
-      }, 800);
+      setIsLoading(false);
     }
   };
 
@@ -188,19 +186,43 @@ export const ContactUsCard = ({
                     </Box>
                   </Grid>
                 </form>
-                {isSubmitted && (
-                  <Callout.Root color="green" mt="5">
-                    <Callout.Icon>
-                      <CheckIcon />
-                    </Callout.Icon>
-                    <Callout.Text>Coming soon.</Callout.Text>
-                  </Callout.Root>
-                )}
               </Card>
             </Box>
           </Flex>
         </Container>
       </Section>
+      <Dialog.Root open={isSuccess} onOpenChange={setIsSuccess}>
+        <Dialog.Content maxWidth="450px" aria-describedby={undefined}>
+          <Dialog.Title>Awesome!</Dialog.Title>
+          <Text as="p">
+            Your message has been sent. We appreciate you reaching out and will
+            be in contact shortly.
+          </Text>
+          <Flex gap="3" mt="4" justify="end">
+            <Dialog.Close>
+              <Button>Close</Button>
+            </Dialog.Close>
+          </Flex>
+        </Dialog.Content>
+      </Dialog.Root>
+      <Dialog.Root open={isFail} onOpenChange={setIsFail}>
+        <Dialog.Content maxWidth="450px" aria-describedby={undefined}>
+          <Dialog.Title>Oops! Something Went Wrong.</Dialog.Title>
+          <Text as="p">
+            We're sorry, but there was an issue sending your message. Please try
+            again later, or you can email us directly at{" "}
+            <Link href="mailto:info@infraspan.com.au">
+              info@infraspan.com.au
+            </Link>
+            .
+          </Text>
+          <Flex gap="3" mt="4" justify="end">
+            <Dialog.Close>
+              <Button>Close</Button>
+            </Dialog.Close>
+          </Flex>
+        </Dialog.Content>
+      </Dialog.Root>
     </>
   );
 };
