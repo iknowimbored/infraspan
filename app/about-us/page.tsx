@@ -2,7 +2,15 @@ import { CarouselCards } from "@/lib/components/carousel-cards";
 import { ContactUsCard } from "@/lib/components/contact-us-card";
 import { HeroSection } from "@/lib/components/hero-section";
 import { ABOUT } from "@/lib/data/about";
-import { Box, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Section,
+  Strong,
+  Text,
+} from "@radix-ui/themes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -48,23 +56,23 @@ export default function Page() {
           >
             <Box>
               <Text as="p" color="gray" mb="5">
-                We are partners in progress. Infraspan helps organisations
-                thrive in a digital-first world by combining deep technical
-                expertise with practical, hands-on delivery. We work alongside
-                our clients to architect modern infrastructure and solutions
-                that drive sustainable growth and real-world outcomes.
+                <Strong>We are partners in progress.</Strong> Infraspan helps
+                organisations thrive in a digital first world by combining deep
+                technical expertise with practical, hands on delivery. We work
+                alongside our clients to architect modern infrastructure and
+                solutions that drive sustainable growth and tangible results.
               </Text>
               <Text as="p" color="gray" mb="5">
-                As an Australian IT consulting firm, we go beyond advice —
+                As an Australian IT consulting firm, we go beyond advice by
                 delivering tailored solutions and strategic alignment across
                 every stage of the journey. Our clients gain clear visibility
                 and control over their digital environments, supported by proven
-                methods and measurable outcomes.
+                methods and measurable impact.
               </Text>
               <Text as="p" color="gray" mb="5">
-                With engagements across New South Wales, Victoria, and Tasmania,
-                our impact spans a wide range of industries — helping businesses
-                of all sizes modernise systems, reduce complexity, and improve
+                With engagements across New South Wales, Victoria and Tasmania,
+                our reach spans a wide range of industries, helping businesses
+                of all sizes modernise systems, reduce complexity and improve
                 performance.
               </Text>
             </Box>
@@ -80,10 +88,15 @@ export default function Page() {
       </Section>
       <Section size="4" px="5">
         <Container size={{ initial: "3", xl: "4" }}>
-          <Heading as="h2">
-            We're not just consultants — we're your technology partner for
+          <Heading as="h2" mb="4">
+            We're not just consultants. We're your technology partner for
             progress.
           </Heading>
+          <Text as="p">
+            Our approach is grounded in four core commitments. These principles
+            shape how we engage, deliver and support every step of your
+            technology journey.
+          </Text>
           <CarouselCards items={ABOUT} />
         </Container>
       </Section>
