@@ -16,8 +16,8 @@ import Link from "next/link";
 
 export default function TermsAndConditionsPage() {
   return (
-    <Container px="4" py="9" size="2">
-      <Flex direction="column" gap="3">
+    <Container size={{ initial: "3", xl: "4" }} px="4" py="9">
+      <Flex direction="column" gap="4">
         <Flex gap="2">
           <Badge>
             <time>May 7, 2025</time>

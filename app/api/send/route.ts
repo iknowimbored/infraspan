@@ -16,10 +16,10 @@ export async function POST(request: NextRequest) {
       react: EmailTemplate(body) as ReactNode,
     });
     if (error) {
-      throw new Error(error.message);
+      throw new Error();
     }
-    return NextResponse.json(body);
-  } catch (error) {
-    return NextResponse.json({ error }, { status: 500 });
+    return NextResponse.json({ success: true });
+  } catch {
+    return NextResponse.json({ success: false }, { status: 500 });
   }
 }

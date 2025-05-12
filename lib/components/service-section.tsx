@@ -11,7 +11,7 @@ export const ServiceSection = ({
 }) => {
   return (
     <Section id={service.id} size="4" px="5">
-      <Container size="3">
+      <Container size={{ initial: "3", xl: "4" }}>
         <Flex
           direction={{ initial: "column", md: "row" }}
           gap={{ initial: "4", md: "9" }}

@@ -45,7 +45,7 @@ export const HeroSection = ({
         left="0"
         style={{ background: "rgba(0,0,0,0.7)" }}
       ></Box>
-      <Container size="3" position="relative">
+      <Container size={{ initial: "3", xl: "4" }} position="relative">
         <Flex maxWidth="800px" direction="column">
           {children ? (
             children

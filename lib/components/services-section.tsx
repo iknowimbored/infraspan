@@ -46,7 +46,7 @@ const ServiceCard = ({ service }: { service: ServiceI }) => {
 export const ServicesSection = () => {
   return (
     <Section size="4" px="5">
-      <Container size="3">
+      <Container size={{ initial: "3", xl: "4" }}>
         <Flex direction="column" gap="4">
           <Heading as="h2" size={{ initial: "7", sm: "8" }} weight="medium">
             Our Core Services

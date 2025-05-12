@@ -40,7 +40,7 @@ export default function Page() {
           left="0"
           style={{ background: "rgba(0,0,0,0.7)" }}
         ></Box>
-        <Container size="3" position="relative">
+        <Container size={{ initial: "3", xl: "4" }} position="relative">
           <Flex
             direction={{ initial: "column", sm: "row" }}
             align="center"
@@ -79,7 +79,7 @@ export default function Page() {
         </Container>
       </Section>
       <Section size="4" px="5">
-        <Container size="3">
+        <Container size={{ initial: "3", xl: "4" }}>
           <Heading as="h2">
             We're not just consultants — we're your technology partner for
             progress.

@@ -18,7 +18,7 @@ import {
 export const CaseStudiesSection = () => {
   return (
     <Section size="4" px="3">
-      <Container size="3">
+      <Container size={{ initial: "3", xl: "4" }}>
         <Flex direction="column" gap="9">
           {CASE_STUDIES.map((x: CaseStudyI, i: number) => (
             <Box key={i}>

@@ -5,3 +5,7 @@ export interface ContactUsInputs {
   companyName: string;
   message: string;
 }
+
+export interface SendResponse {
+  success: boolean;
+}

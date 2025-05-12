@@ -20,8 +20,9 @@ import {
 } from "@radix-ui/themes";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { ContactUsInputs } from "../@types/contact";
+import { ContactUsInputs, SendResponse } from "../@types/contact";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { CaptchaResponse } from "../@types/captcha";
 
 export const ContactUsCard = ({
   heading,
@@ -39,14 +40,19 @@ export const ContactUsCard = ({
   const onSubmit: SubmitHandler<ContactUsInputs> = async (data) => {
     try {
       setIsLoading(true);
-      await fetch("/api/send", {
+      const res = await fetch("/api/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
-      setIsFail(true);
+      const body: SendResponse = await res.json();
+      if (body.success) {
+        setIsSuccess(true);
+        return;
+      }
+      throw new Error();
     } catch {
       setIsFail(true);
     } finally {
@@ -56,14 +62,19 @@ export const ContactUsCard = ({
 
   const verifyToken = async (token: string) => {
     try {
-      setIsVerified(true);
-      await fetch("/api/captcha", {
+      const res = await fetch("/api/captcha", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ token }),
       });
+      const body: CaptchaResponse = await res.json();
+      if (body.success) {
+        setIsVerified(true);
+        return;
+      }
+      throw new Error();
     } catch {
       setIsVerified(false);
     }
@@ -73,7 +84,7 @@ export const ContactUsCard = ({
     <>
       {heading && <Separator style={{ width: "100%" }} />}
       <Section size="4" px="5">
-        <Container size="3">
+        <Container size={{ initial: "3", xl: "4" }}>
           <Flex
             direction={{ initial: "column", sm: "row" }}
             justify="between"
