@@ -7,7 +7,7 @@ export const AdminEmailTemplate: React.FC<Readonly<ContactUsInputs>> = (
   <div>
     <h2>Hi, Admin!</h2>
     <p>
-      You have received a new message through the contact form on
+      You have received a new message through the contact form on{" "}
       <a href="https://www.infraspan.com.au">www.infraspan.com.au</a>.
     </p>
     <p>Here are the details of the submission:</p>
