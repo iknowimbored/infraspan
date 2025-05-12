@@ -28,7 +28,7 @@ export default function Page() {
           backgroundImage: "url(/backgrounds/logo.png)",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "500px",
+          backgroundSize: "450px",
         }}
         position="relative"
       >
