@@ -147,7 +147,7 @@ export const ContactUsCard = ({
                         id="fullName"
                         {...register("fullName")}
                         required
-                        placeholder="First name and last name"
+                        placeholder="First Name and Last Name"
                         radius="large"
                       />
                     </Box>
@@ -160,7 +160,7 @@ export const ContactUsCard = ({
                         type="email"
                         {...register("email")}
                         required
-                        placeholder="name@company.com"
+                        placeholder="Email Address"
                         radius="large"
                       />
                     </Box>
@@ -173,7 +173,7 @@ export const ContactUsCard = ({
                         type="tel"
                         {...register("phoneNumber")}
                         required
-                        placeholder="Phone number"
+                        placeholder="Phone Number"
                         radius="large"
                       />
                     </Box>
@@ -185,7 +185,7 @@ export const ContactUsCard = ({
                         id="companyName"
                         {...register("companyName")}
                         required
-                        placeholder="Company name"
+                        placeholder="Company Name"
                         radius="large"
                       />
                     </Box>
@@ -198,7 +198,7 @@ export const ContactUsCard = ({
                         {...register("message")}
                         required
                         minLength={10}
-                        placeholder="Write a message..."
+                        placeholder="Message..."
                       />
                     </Box>
                     <HCaptcha

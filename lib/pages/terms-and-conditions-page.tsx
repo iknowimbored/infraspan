@@ -190,9 +190,12 @@ export default function TermsAndConditionsPage() {
             10. Governing Law
           </Heading>
           <Text as="p">
-            These Terms are governed by the laws of the State of [Insert State],
-            Australia. Any disputes will be subject to the exclusive
-            jurisdiction of the courts of that State.
+            These Terms are governed by the laws of the State of New South
+            Wales, Australia. However, where services are delivered in other
+            jurisdictions such as Victoria or Tasmania, local laws may also
+            apply. Any disputes shall be subject to the exclusive jurisdiction
+            of the courts of New South Wales, unless otherwise required by
+            applicable local law.
           </Text>
         </Flex>
       </Section>
