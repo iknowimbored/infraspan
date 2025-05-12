@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     const body: ContactUsInputs = await request.json();
     const { error } = await resend.emails.send({
       from: "Infraspan Info <info@infraspan.com.au>",
-      to: [body.email, "info@memsafe.com.au"],
+      to: [body.email, "info@infraspan.com.au"],
       subject: "Thank You for Contacting Infraspan",
       react: EmailTemplate(body) as ReactNode,
     });

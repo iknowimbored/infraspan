@@ -231,9 +231,7 @@ export const ContactUsCard = ({
             be in contact shortly.
           </Text>
           <Flex gap="3" mt="4" justify="end">
-            <Dialog.Close>
-              <Button>Close</Button>
-            </Dialog.Close>
+            <Button onClick={() => window.location.reload()}>Close</Button>
           </Flex>
         </Dialog.Content>
       </Dialog.Root>

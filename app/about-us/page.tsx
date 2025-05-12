@@ -38,7 +38,7 @@ export default function Page() {
           right="0"
           bottom="0"
           left="0"
-          style={{ background: "rgba(0,0,0,0.7)" }}
+          style={{ background: "rgba(17,17,17,0.7)" }}
         ></Box>
         <Container size={{ initial: "3", xl: "4" }} position="relative">
           <Flex
