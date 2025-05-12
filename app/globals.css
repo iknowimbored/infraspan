@@ -43,6 +43,13 @@ a {
   }
 }
 
+mux-player {
+  --controls: none;
+  --dialog: none;
+  --loading-indicator: none;
+  --media-object-fit: cover;
+}
+
 .custom-class .social-svg-icon {
   fill: var(--mauve-8) !important;
 }

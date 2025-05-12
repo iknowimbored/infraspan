@@ -14,6 +14,7 @@ export default function HomePage() {
         backgroundUrl="/backgrounds/Home_HEADER.jpeg"
         buttonLabel="Talk to a Consultant"
         subheading="We bring clarity to complexity and drive the momentum where it matters most."
+        isVideo
       >
         <Heading size={{ initial: "8", sm: "9" }} mb="4">
           Focused Strategy. <br />
