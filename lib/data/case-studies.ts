@@ -20,7 +20,7 @@ export const CASE_STUDIES: CaseStudyI[] = [
     problem:
       "The client needed to validate their existing AI/ML solution to confirm whether the delivered platform met agreed requirements and quality standards.",
     solution: [
-      "Infraspan delivered an independent consultancy engagement to audit the AI/ML SaaS platform developed by a third-party. Our findings provided the client with the clarity and technical insight needed to request critical rectifications and halt further investment — avoiding additional costs on a solution that had already exceeded AUD $1M.",
+      "Infraspan delivered an <strong>independent consultancy engagement</strong> to audit the <strong>AI/ML SaaS platform</strong> developed by a third-party. Our findings provided the client with the clarity and technical insight needed to request critical rectifications and halt further investment — avoiding additional costs on a solution that had already exceeded AUD $1M.",
     ],
     logos: [
       {
@@ -35,10 +35,10 @@ export const CASE_STUDIES: CaseStudyI[] = [
     about:
       "Waratah-Wynyard Council is a local government body in Tasmania that provides services for the community, including visitor information, business support, and waste management.",
     problem:
-      "Identify and address capability gaps in infrastructure and project management due to issues in system performance and reliability.",
+      "Identify and address capability gaps in infrastructure and project management arising from ongoing challenges with system stability and operational effectiveness, and provide support where required.",
     solution: [
-      "Infraspan created <strong>Digital Transformation Report</strong> and a <strong>System Administrator as a Service</strong>.",
-      "A comprehensive discovery process was conducted, including interviews with key personnel to understand business goals, as well as a review of technology and network configurations, server setups, and backups to ensure alignment with industry standards.",
+      "Infraspan delivered <strong>Digital Transformation discovery</strong> and introduced <strong>System Administrator as a Service</strong>.",
+      "This involved a comprehensive assessment, including interviews with key personnel to understand business objectives, and a detailed review of the technology environment, covering network configurations, server setups, and backup systems to ensure alignment with industry standards. Where gaps were identified, Infraspan provided necessary capability and support to strengthen operations and address critical needs.",
     ],
     logos: [
       {
@@ -60,7 +60,7 @@ export const CASE_STUDIES: CaseStudyI[] = [
     problem:
       "As part of its work delivering outcomes for a major Sydney Airport project, Avec Global needed Microsoft expertise to design an Azure-based data platform. They required support to guide their data engineers and analysts in building pipelines and infrastructure flow across development, staging, and production environments. The solution needed to meet enterprise-level expectations for performance, security, and compliance.",
     solution: [
-      "Infraspan Pty Ltd provided a Microsoft Solutions Architect to lead the design and implementation of a scalable Data Platform as a Service (DPaaS) solution in Azure. The architecture enabled Avec Global's delivery team to accelerate development, ensure governance, and confidently manage infrastructure across all environments. The solution successfully met the complex requirements of the Sydney Airport client.",
+      "Infraspan Pty Ltd provided a <strong>Microsoft Solutions Architect</strong> to lead the design and implementation of a scalable <strong>Data Platform as a Service (DPaaS) solution</strong> in Azure. The architecture enabled Avec Global's delivery team to accelerate development, ensure governance, and confidently manage infrastructure across all environments. The solution successfully met the complex requirements of the Sydney Airport client.",
     ],
     logos: [
       {
