@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Container, Flex, Heading, Section } from "@radix-ui/themes";
 import { PartnerI, PARTNERS } from "../data/partners";
 import Link from "next/link";
