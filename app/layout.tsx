@@ -37,25 +37,22 @@ export default function RootLayout({
       <Head>
         <meta name="apple-mobile-web-app-title" content="Infraspan" />
         <meta name="robots" content="all" />
-        <meta
-          property="og:title"
-          content="Digital Infrastructure Solutions | Infraspan Pty Ltd"
-        />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.infraspan.com.au" />
+        <meta property="og:title" content="Infraspan Pty Ltd" />
         <meta property="og:description" content={METADATA_DESCRIPTION} />
         <meta
           property="og:image"
           content="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png"
         />
-        <meta property="og:image:alt" content="Infraspan Pty Ltd" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.infraspan.com.au" />
+        <meta property="twitter:title" content="Infraspan Pty Ltd" />
+        <meta property="twitter:description" content={METADATA_DESCRIPTION} />
         <meta
-          name="twitter:title"
-          content="Digital Infrastructure Solutions | Infraspan Pty Ltd"
-        />
-        <meta name="twitter:description" content={METADATA_DESCRIPTION} />
-        <meta
-          name="twitter:image"
+          property="twitter:image"
           content="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png"
         />
       </Head>

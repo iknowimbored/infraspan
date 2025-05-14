@@ -30,5 +30,17 @@
             <changefreq>yearly</changefreq>
             <priority>0.5</priority>
         </url>
+        <url>
+            <loc>https://www.infrapsan.com.au/privacy-policy</loc>
+            <lastmod>2025-05-07</lastmod>
+            <changefreq>yearly</changefreq>
+            <priority>0.3</priority>
+        </url>
+        <url>
+            <loc>https://www.infrapsan.com.au/terms-and-conditions</loc>
+            <lastmod>2025-05-07</lastmod>
+            <changefreq>yearly</changefreq>
+            <priority>0.3</priority>
+        </url>
     </urlset>
 </xml>
