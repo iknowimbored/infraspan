@@ -2,7 +2,7 @@ import TermsAndConditionsPage from "@/lib/pages/terms-and-conditions-page";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Infraspan",
+  title: "Terms and Conditions | Infraspan Pty Ltd",
 };
 
 export default function Page() {

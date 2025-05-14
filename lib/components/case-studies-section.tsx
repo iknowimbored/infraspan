@@ -14,6 +14,7 @@ import {
   CaseStudyClientI,
   CaseStudyI,
 } from "../data/case-studies";
+import Image from "next/image";
 
 export const CaseStudiesSection = () => {
   return (
@@ -46,11 +47,11 @@ export const CaseStudiesSection = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <img
+                      <Image
                         src={y.logoUrl}
                         alt={y.name + " Logo"}
-                        width="200px"
-                        height="auto"
+                        width="200"
+                        height={y.logoHeight}
                       />
                     </a>
                   ))}

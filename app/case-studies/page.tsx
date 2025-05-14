@@ -5,7 +5,7 @@ import { Heading } from "@radix-ui/themes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Infraspan",
+  title: "Case Studies | Infraspan Pty Ltd",
 };
 
 export default function Page() {

@@ -8,7 +8,7 @@ import { Separator } from "@radix-ui/themes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Infraspan",
+  title: "Digital Infrastructure Solutions | Infraspan Pty Ltd",
 };
 
 export default async function Page() {

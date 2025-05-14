@@ -13,15 +13,18 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { Navbar } from "@/lib/components/navbar";
 import { SocialIcon } from "react-social-icons";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+const METADATA_DESCRIPTION =
+  "Infraspan Pty Ltd is an Australian IT consulting firm delivering digital transformation, infrastructure, and architecture solutions that simplify tech and drive results.";
+
 export const metadata: Metadata = {
-  description:
-    "Infraspan helps organisations thrive in a digital-first world by combining deep technical expertise with practical, hands-on delivery. We work alongside our clients to architect modern infrastructure and solutions that drive sustainable growth and real-world outcomes.",
+  description: METADATA_DESCRIPTION,
 };
 
 export default function RootLayout({
@@ -31,6 +34,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="apple-mobile-web-app-title" content="Infraspan" />
+        <meta name="robots" content="all" />
+        <meta
+          property="og:title"
+          content="Digital Infrastructure Solutions | Infraspan Pty Ltd"
+        />
+        <meta property="og:description" content={METADATA_DESCRIPTION} />
+        <meta
+          property="og:image"
+          content="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png"
+        />
+        <meta property="og:image:alt" content="Infraspan Pty Ltd" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Digital Infrastructure Solutions | Infraspan Pty Ltd"
+        />
+        <meta name="twitter:description" content={METADATA_DESCRIPTION} />
+        <meta
+          name="twitter:image"
+          content="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png"
+        />
+      </Head>
       <body className={`${geistSans.variable} ${styles.page}`}>
         <Theme
           accentColor="violet"

@@ -6,7 +6,7 @@ import { Box, Heading, Separator } from "@radix-ui/themes";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | Infraspan",
+  title: "Services | Infraspan Pty Ltd",
 };
 
 export default function Page() {

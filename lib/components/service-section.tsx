@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Heading, Section, Text } from "@radix-ui/themes";
 import { ServiceI } from "../data/services";
 import { CheckCircledIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 export const ServiceSection = ({
   service,
@@ -18,11 +19,11 @@ export const ServiceSection = ({
           justify="between"
         >
           <Flex display={{ md: "none" }} justify="center">
-            <img
+            <Image
               src={service.imageUrl}
               alt={`${service.title} Image`}
-              width="auto"
-              height="300px"
+              width="300"
+              height="300"
             />
           </Flex>
           <Box
@@ -32,11 +33,11 @@ export const ServiceSection = ({
               marginTop: "-3rem",
             }}
           >
-            <img
+            <Image
               src={service.imageUrl}
               alt={`${service.title} Image`}
-              width="auto"
-              height="400px"
+              width="400"
+              height="400"
             />
           </Box>
           <Box flexGrow="1" flexShrink="1" flexBasis="0">
