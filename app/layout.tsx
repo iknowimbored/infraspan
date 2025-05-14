@@ -13,18 +13,42 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { Navbar } from "@/lib/components/navbar";
 import { SocialIcon } from "react-social-icons";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+const METADATA_URL = "https://www.infraspan.com.au";
+const METADATA_TITLE = "Infraspan Pty Ltd";
 const METADATA_DESCRIPTION =
   "Infraspan Pty Ltd is an Australian IT consulting firm delivering digital transformation, infrastructure, and architecture solutions that simplify tech and drive results.";
+const METADATA_IMAGE =
+  "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png";
 
 export const metadata: Metadata = {
   description: METADATA_DESCRIPTION,
+  robots: "all",
+  openGraph: {
+    type: "website",
+    url: METADATA_URL,
+    title: METADATA_TITLE,
+    description: METADATA_DESCRIPTION,
+    images: {
+      url: METADATA_IMAGE,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: METADATA_TITLE,
+    description: METADATA_DESCRIPTION,
+    images: {
+      url: METADATA_IMAGE,
+    },
+  },
+  appleWebApp: {
+    title: "Infraspan",
+  },
 };
 
 export default function RootLayout({
@@ -34,28 +58,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="apple-mobile-web-app-title" content="Infraspan" />
-        <meta name="robots" content="all" />
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.infraspan.com.au" />
-        <meta property="og:title" content="Infraspan Pty Ltd" />
-        <meta property="og:description" content={METADATA_DESCRIPTION} />
-        <meta
-          property="og:image"
-          content="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png"
-        />
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.infraspan.com.au" />
-        <meta property="twitter:title" content="Infraspan Pty Ltd" />
-        <meta property="twitter:description" content={METADATA_DESCRIPTION} />
-        <meta
-          property="twitter:image"
-          content="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png"
-        />
-      </Head>
       <body className={`${geistSans.variable} ${styles.page}`}>
         <Theme
           accentColor="violet"
