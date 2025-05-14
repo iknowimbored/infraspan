@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       <HeroSection
-        backgroundUrl="/backgrounds/Services_HEADER.jpeg"
+        backgroundUrl="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/background_services_header-3tsqxrDaXVFhaWxu9R2BFoHCGcuPRG.jpeg"
         buttonLabel="Talk to a Consultant"
         heading="Engineering impact through modern infrastructure and intelligent design"
         subheading=" Built around your goals — tailored architecture that drives tangible outcomes."

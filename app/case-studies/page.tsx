@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <HeroSection
-        backgroundUrl="/backgrounds/Case-Studies_HEADER.png"
+        backgroundUrl="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/background_case-studies_header-iclxpA1JWplrH3JscQjzO1TkhiYwkV.png"
         buttonLabel="Talk to a Consultant"
         heading="Solutions That Work. Outcomes That Matter."
         subheading="See how we solve real challenges across industries."
