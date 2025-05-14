@@ -3,6 +3,7 @@
 import { Button, Container, Flex, Heading, Section } from "@radix-ui/themes";
 import { PartnerI, PARTNERS } from "../data/partners";
 import Link from "next/link";
+import Image from "next/image";
 
 export const PartnersSection = () => {
   return (
@@ -21,10 +22,10 @@ export const PartnersSection = () => {
           >
             {PARTNERS.map((x: PartnerI, i: number) => (
               <a key={i} href={x.websiteUrl} target="_blank" rel="noreferrer">
-                <img
+                <Image
                   src={x.imageUrl}
                   alt={x.name + " Logo"}
-                  width="240px"
+                  width="240"
                   height="60"
                 />
               </a>

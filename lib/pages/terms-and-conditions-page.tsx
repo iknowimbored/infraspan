@@ -27,7 +27,7 @@ export default function TermsAndConditionsPage() {
         <Box>
           <Button variant="outline">
             <Link
-              href="/documents/Infraspan_Terms_and_Conditions.pdf"
+              href="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/Infraspan_Terms_and_Conditions-QAlg8SRWHQk6ddTKdiT0pFmL6XgzV9.pdf"
               target="_blank"
             >
               <FileIcon /> View PDF

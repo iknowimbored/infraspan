@@ -1,5 +1,6 @@
 export interface CaseStudyClientI {
   name: string;
+  logoHeight: number;
   logoUrl: string;
   websiteUrl: string;
 }
@@ -25,7 +26,9 @@ export const CASE_STUDIES: CaseStudyI[] = [
     logos: [
       {
         name: "The Gordon TAFE",
-        logoUrl: "/logos/gordon.svg",
+        logoHeight: 64,
+        logoUrl:
+          "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/company_gordon-l9ol9HeTFurLqngzunlFshUYtkIUd5.svg",
         websiteUrl: "https://www.thegordon.edu.au",
       },
     ],
@@ -43,12 +46,16 @@ export const CASE_STUDIES: CaseStudyI[] = [
     logos: [
       {
         name: "Waratah-Wynyard Council",
-        logoUrl: "/logos/waratah-wynyard.svg",
+        logoHeight: 64,
+        logoUrl:
+          "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/company_waratah-wynyard-tF39Shwqle9jNdr9yTk3PixJhTdKvH.svg",
         websiteUrl: "https://www.warwyn.tas.gov.au",
       },
       {
         name: "Circular Head Council",
-        logoUrl: "/logos/circular-head-council.png",
+        logoHeight: 190,
+        logoUrl:
+          "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/company_circular-head-council-Jb1ZqzJmkKZylZvZCYncRRWBEIMZGv.png",
         websiteUrl: "https://www.circularhead.tas.gov.au",
       },
     ],
@@ -65,7 +72,9 @@ export const CASE_STUDIES: CaseStudyI[] = [
     logos: [
       {
         name: "Avec Global Pty Ltd",
-        logoUrl: "/logos/avec.png",
+        logoHeight: 64,
+        logoUrl:
+          "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/company_avec-r1Azd3DvMJf2aOPNTtV7gP7o7sAmYq.png",
         websiteUrl: "https://www.avecglobal.com",
       },
     ],

@@ -12,6 +12,7 @@ import Link from "next/link";
 import { ServiceI, SERVICES } from "../data/services";
 import styles from "../styles/card.module.css";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 const ServiceCard = ({ service }: { service: ServiceI }) => {
   return (
@@ -19,12 +20,13 @@ const ServiceCard = ({ service }: { service: ServiceI }) => {
       <Link href={`/services#${service.id}`}>
         <Card className={styles.card} size="2">
           <Flex height="100%" direction="column">
-            <img
+            <Image
               src={service.imageUrl}
               alt={`${service.title} Image`}
-              width="80%"
+              width="150"
+              height="200"
             />
-            <Heading as="h3" mb="3" size="4">
+            <Heading as="h3" my="3" size="4">
               {service.title}
             </Heading>
             <Text as="p" color="gray" mb="5">

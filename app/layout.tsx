@@ -19,9 +19,36 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
+const METADATA_URL = "https://www.infraspan.com.au";
+const METADATA_TITLE = "Infraspan Pty Ltd";
+const METADATA_DESCRIPTION =
+  "Infraspan Pty Ltd is an Australian IT consulting firm delivering digital transformation, infrastructure, and architecture solutions that simplify tech and drive results.";
+const METADATA_IMAGE =
+  "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png";
+
 export const metadata: Metadata = {
-  description:
-    "Infraspan helps organisations thrive in a digital-first world by combining deep technical expertise with practical, hands-on delivery. We work alongside our clients to architect modern infrastructure and solutions that drive sustainable growth and real-world outcomes.",
+  description: METADATA_DESCRIPTION,
+  robots: "all",
+  openGraph: {
+    type: "website",
+    url: METADATA_URL,
+    title: METADATA_TITLE,
+    description: METADATA_DESCRIPTION,
+    images: {
+      url: METADATA_IMAGE,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: METADATA_TITLE,
+    description: METADATA_DESCRIPTION,
+    images: {
+      url: METADATA_IMAGE,
+    },
+  },
+  appleWebApp: {
+    title: "Infraspan",
+  },
 };
 
 export default function RootLayout({

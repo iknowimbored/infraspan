@@ -2,6 +2,7 @@
 
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Box, Button, DropdownMenu, Flex } from "@radix-ui/themes";
+import Image from "next/image";
 import Link from "next/link";
 
 export const Navbar = () => {
@@ -31,10 +32,10 @@ export const Navbar = () => {
         >
           <Box mt="2">
             <Link href="/">
-              <img
-                src="/logos/infraspan.png"
+              <Image
+                src="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/company_infraspan-bizoCWDGVpvWINqpPWszun575caN09.png"
                 alt="Infraspan Logo"
-                width="auto"
+                width="160"
                 height="32"
               />
             </Link>

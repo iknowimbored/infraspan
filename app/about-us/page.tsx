@@ -12,16 +12,34 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Us | Infraspan",
+  title: "About Us | Infraspan Pty Ltd",
 };
 
 export default function Page() {
+  function addProductJsonLd() {
+    return {
+      __html: `{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Infraspan Pty Ltd",
+  "alternateName": "Infraspan",
+  "url": "https://www.infraspan.com.au/about-us",
+  "logo": "https://www.infraspan.com.au/icon1.png",
+  "sameAs": [
+    "https://au.linkedin.com/company/infraspanptyltd",
+    "https://instagram.com/infraspan"
+  ]
+}
+  `,
+    };
+  }
   return (
     <>
       <HeroSection
-        backgroundUrl="/backgrounds/About-Us_HEADER.jpeg"
+        backgroundUrl="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/background_about-us_header-aP8khUdQ3WgW8dunlseE6Z8bRW9BRh.jpeg"
         subheading="We bring collaboration, clarity, and capability to every stage of your journey."
       >
         <Heading size={{ initial: "8", sm: "9" }} mb="4">
@@ -33,7 +51,8 @@ export default function Page() {
         pt="9"
         px="5"
         style={{
-          backgroundImage: "url(/backgrounds/logo.png)",
+          backgroundImage:
+            "url(https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/background_about-us_body-aUAXUJfsBHSuNlS7tvk13eIrSOufq1.png)",
           backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
           backgroundSize: "450px",
@@ -76,12 +95,11 @@ export default function Page() {
                 performance.
               </Text>
             </Box>
-            <img
-              src="/vectors/team.svg"
+            <Image
+              src="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/about-us-lyQvFXg6LeUuIRU5TSx7McjGzYL1Ld.svg"
               alt="Team Image"
               width="300"
               height="300"
-              style={{ marginTop: "-2rem" }}
             />
           </Flex>
         </Container>
@@ -103,6 +121,11 @@ export default function Page() {
       <ContactUsCard
         heading="That's our story. What's yours?"
         subheading="Book a Free Consultation"
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={addProductJsonLd()}
+        key="product-jsonld"
       />
     </>
   );

@@ -27,7 +27,7 @@ export default function PrivacyPolicyPage() {
         <Box>
           <Button variant="outline">
             <Link
-              href="/documents/Infraspan_Privacy_Policy.pdf"
+              href="https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/Infraspan_Privacy_Policy-aJzNc6J0bydbGtxYwhcVDmMcaL0gdu.pdf"
               target="_blank"
             >
               <FileIcon /> View PDF
