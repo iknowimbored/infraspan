@@ -1,4 +1,4 @@
-export interface ContactUsInputs {
+export interface ContactUsInputsI {
   fullName: string;
   email: string;
   phoneNumber: string;
@@ -6,6 +6,6 @@ export interface ContactUsInputs {
   message: string;
 }
 
-export interface SendResponse {
+export interface SendResponseI {
   success: boolean;
 }

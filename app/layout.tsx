@@ -19,32 +19,31 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const METADATA_URL = "https://www.infraspan.com.au";
-const METADATA_TITLE = "Infraspan Pty Ltd";
-const METADATA_DESCRIPTION =
-  "Infraspan Pty Ltd is an Australian IT consulting firm delivering digital transformation, infrastructure, and architecture solutions that simplify tech and drive results.";
-const METADATA_IMAGE =
-  "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png";
-
 export const metadata: Metadata = {
-  description: METADATA_DESCRIPTION,
+  description:
+    "Infraspan Pty Ltd is an Australian IT consulting firm delivering digital transformation, infrastructure, and architecture solutions that simplify tech and drive results.",
   robots: "all",
   openGraph: {
     type: "website",
-    url: METADATA_URL,
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    url: "https://www.infraspan.com.au",
+    title: "Infraspan Pty Ltd",
+    description:
+      "Infraspan Pty Ltd is an Australian IT consulting firm delivering digital transformation, infrastructure, and architecture solutions that simplify tech and drive results.",
     images: {
-      url: METADATA_IMAGE,
+      url: "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png",
     },
   },
   twitter: {
     card: "summary_large_image",
-    title: METADATA_TITLE,
-    description: METADATA_DESCRIPTION,
+    title: "Infraspan Pty Ltd",
+    description:
+      "Infraspan Pty Ltd is an Australian IT consulting firm delivering digital transformation, infrastructure, and architecture solutions that simplify tech and drive results.",
     images: {
-      url: METADATA_IMAGE,
+      url: "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/thumbnail-eGtua6K35UaX1vVsSc3YxK7kK2EzKo.png",
     },
+  },
+  verification: {
+    google: "eMxsEvatJ87VGpgfDHQA8MO8XijVpnT9_ysWAjozDZs"
   },
   appleWebApp: {
     title: "Infraspan",

@@ -1,4 +1,4 @@
-import { ContactUsInputs } from "@/lib/@types/contact";
+import { ContactUsInputsI } from "@/lib/@types/contact";
 import { AdminEmailTemplate } from "@/lib/components/admin-email-template";
 import { EmailTemplate } from "@/lib/components/email-template";
 import { NextRequest, NextResponse } from "next/server";
@@ -9,7 +9,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   try {
-    const body: ContactUsInputs = await request.json();
+    const body: ContactUsInputsI = await request.json();
     const { error } = await resend.emails.send({
       from: "Infraspan Info <info@infraspan.com.au>",
       to: ["info@infraspan.com.au"],

@@ -1,8 +1,8 @@
-export interface CaptchaInputs {
+export interface CaptchaInputsI {
   token: string;
 }
 
-export interface CaptchaResponse {
+export interface CaptchaResponseI {
   success: boolean;
   challenge_ts: string;
   hostname: string;

@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ContactUsInputs } from "../@types/contact";
+import { ContactUsInputsI } from "../@types/contact";
 
-export const EmailTemplate: React.FC<Readonly<ContactUsInputs>> = (props) => (
+export const EmailTemplate: React.FC<Readonly<ContactUsInputsI>> = (props) => (
   <div>
     <h2>Hi, {props.fullName}!</h2>
     <p>

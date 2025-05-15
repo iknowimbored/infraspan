@@ -2,6 +2,7 @@ import { CarouselCards } from "@/lib/components/carousel-cards";
 import { ContactUsCard } from "@/lib/components/contact-us-card";
 import { HeroSection } from "@/lib/components/hero-section";
 import { ABOUT } from "@/lib/data/about";
+import { PAGE_METADATA } from "@/lib/data/metadata";
 import {
   Box,
   Container,
@@ -14,9 +15,9 @@ import {
 import { Metadata } from "next";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "About Us | Infraspan Pty Ltd",
-};
+export const metadata: Metadata = PAGE_METADATA.find(
+  (x) => x.route === "about-us"
+)?.metadata as Metadata;
 
 export default function Page() {
   function addProductJsonLd() {

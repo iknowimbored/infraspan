@@ -1,12 +1,13 @@
 import { CaseStudiesSection } from "@/lib/components/case-studies-section";
 import { ContactUsCard } from "@/lib/components/contact-us-card";
 import { HeroSection } from "@/lib/components/hero-section";
+import { PAGE_METADATA } from "@/lib/data/metadata";
 import { Heading } from "@radix-ui/themes";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Case Studies | Infraspan Pty Ltd",
-};
+export const metadata: Metadata = PAGE_METADATA.find(
+  (x) => x.route === "case-studies"
+)?.metadata as Metadata;
 
 export default function Page() {
   return (

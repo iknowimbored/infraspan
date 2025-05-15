@@ -20,9 +20,9 @@ import {
 } from "@radix-ui/themes";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { ContactUsInputs, SendResponse } from "../@types/contact";
+import { ContactUsInputsI, SendResponseI } from "../@types/contact";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
-import { CaptchaResponse } from "../@types/captcha";
+import { CaptchaResponseI } from "../@types/captcha";
 
 export const ContactUsCard = ({
   heading,
@@ -35,9 +35,9 @@ export const ContactUsCard = ({
   const [isSuccess, setIsSuccess] = useState(false);
   const [isFail, setIsFail] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
-  const { register, handleSubmit } = useForm<ContactUsInputs>();
+  const { register, handleSubmit } = useForm<ContactUsInputsI>();
 
-  const onSubmit: SubmitHandler<ContactUsInputs> = async (data) => {
+  const onSubmit: SubmitHandler<ContactUsInputsI> = async (data) => {
     try {
       setIsLoading(true);
       const res = await fetch("/api/send", {
@@ -47,7 +47,7 @@ export const ContactUsCard = ({
         },
         body: JSON.stringify(data),
       });
-      const body: SendResponse = await res.json();
+      const body: SendResponseI = await res.json();
       if (body.success) {
         setIsSuccess(true);
         return;
@@ -69,7 +69,7 @@ export const ContactUsCard = ({
         },
         body: JSON.stringify({ token }),
       });
-      const body: CaptchaResponse = await res.json();
+      const body: CaptchaResponseI = await res.json();
       if (body.success) {
         setIsVerified(true);
         return;

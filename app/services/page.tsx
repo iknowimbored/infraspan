@@ -1,13 +1,14 @@
 import { ContactUsCard } from "@/lib/components/contact-us-card";
 import { HeroSection } from "@/lib/components/hero-section";
 import { ServiceSection } from "@/lib/components/service-section";
+import { PAGE_METADATA } from "@/lib/data/metadata";
 import { ServiceI, SERVICES } from "@/lib/data/services";
 import { Box, Heading, Separator } from "@radix-ui/themes";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Services | Infraspan Pty Ltd",
-};
+export const metadata: Metadata = PAGE_METADATA.find(
+  (x) => x.route === "services"
+)?.metadata as Metadata;
 
 export default function Page() {
   return (
