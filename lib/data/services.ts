@@ -13,7 +13,8 @@ export const SERVICES: ServiceI[] = [
     title: "Cloud Infrastructure Solutions",
     subtitle:
       "Build secure and flexible environments that support modern business needs.",
-    imageUrl: "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_cloud-hosting-uQoxckzDL10pAzO3Gr3AwGpAVVtuYH.svg",
+    imageUrl:
+      "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_cloud-hosting-uQoxckzDL10pAzO3Gr3AwGpAVVtuYH.svg",
     description:
       "We design and manage cloud environments tailored to your business needs. With a consultative approach and hands-on delivery, we plan, build, and optimise infrastructure that works the way you do.",
     solutions: [
@@ -29,7 +30,8 @@ export const SERVICES: ServiceI[] = [
     title: "Enterprise Applications and Infrastracture Solutions",
     subtitle:
       "Connect systems and streamline workflows to improve performance and visibility.",
-    imageUrl: "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_operating-system-EhrnoMlT2S0SuqJ955sROHGvLZfbRP.svg",
+    imageUrl:
+      "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_operating-system-EhrnoMlT2S0SuqJ955sROHGvLZfbRP.svg",
     description:
       "We work with your existing systems and teams to improve and design digital solutions that unlock better ways of working. Our approach focuses on aligning technology with business strategy to enable smarter decisions, stronger alignment, and sustained growth.",
     solutions: [
@@ -44,7 +46,8 @@ export const SERVICES: ServiceI[] = [
     id: "ai-and-machine-learning",
     title: "AI and Machine Learning Solutions",
     subtitle: "Apply advanced models to analyse data and optimise operations.",
-    imageUrl: "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_artificial-intelligence-0DgxXaCVstDCPh2lnuJwwTpQ82Pu7E.svg",
+    imageUrl:
+      "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_artificial-intelligence-0DgxXaCVstDCPh2lnuJwwTpQ82Pu7E.svg",
     description:
       "We integrate intelligence into your systems to solve complex business challenges. Our data-driven approach improves visibility, drives efficiencies, and supports confident decision-making across your organisation.",
     solutions: [
@@ -58,7 +61,8 @@ export const SERVICES: ServiceI[] = [
     title: "IT Project Management and Architecture",
     subtitle:
       "Execute complex initiatives with clear structure and scalable design.",
-    imageUrl: "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_organising-projects-FlRmFlg5Hhr9tVnO6ceTt781Fan407.svg",
+    imageUrl:
+      "https://fhtfe15dbahb2gme.public.blob.vercel-storage.com/service_organising-projects-FlRmFlg5Hhr9tVnO6ceTt781Fan407.svg",
     description:
       "We deliver complex projects with precision, pace, and purpose. Every initiative is aligned to business goals and built for execution.",
     solutions: [

@@ -53,7 +53,6 @@ export const VideoSection = ({
           preload="auto"
         />
       )}
-
       <Container size={{ initial: "3", xl: "4" }} position="relative">
         <Flex maxWidth="800px" direction="column">
           <Heading size={{ initial: "8", sm: "9" }} mb="4">

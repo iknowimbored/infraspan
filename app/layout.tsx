@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "eMxsEvatJ87VGpgfDHQA8MO8XijVpnT9_ysWAjozDZs"
+    google: "eMxsEvatJ87VGpgfDHQA8MO8XijVpnT9_ysWAjozDZs",
   },
   appleWebApp: {
     title: "Infraspan",
